@@ -1,14 +1,41 @@
+# Unity generated folders
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.plastic/
 *.csproj
 *.unityproj
 *.sln
 *.user
 *.pidb
 *.booproj
-.vscode/
-.plastic/
+
+# Unity packages & external
+*.unitypackage
+*.tgz
+*.cpgz
+
+# Android builds
+*.apk
+*.aab
+
+# Crash and temp
+*.stacktrace
+*.dmp
+*.meta~
+
+# Local package cache
+Packages/com.ptc.vuforia.engine-*.tgz
