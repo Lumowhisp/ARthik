@@ -28,7 +28,11 @@ public class ApiManager : MonoBehaviour
                 string json = req.downloadHandler.text;
                 float rate = ParseRate(json, to);
                 float converted = amount * rate;
-                resultText.text = $"{amount} {from} = {converted:F2} {to}";
+
+                // Extract last update time
+                string lastUpdate = ParseLastUpdate(json);
+
+                resultText.text = $"{amount} {from} = {converted:F2} {to}\nLast Updated: {FormatTime(lastUpdate)}";
             }
             else
             {
@@ -48,5 +52,24 @@ public class ApiManager : MonoBehaviour
         string num = json.Substring(start, end - start);
         float.TryParse(num, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float rate);
         return rate;
+    }
+
+    private string ParseLastUpdate(string json)
+    {
+        string key = "\"time_last_update_utc\":\"";
+        int start = json.IndexOf(key) + key.Length;
+        int end = json.IndexOf("\"", start);
+        string dateStr = json.Substring(start, end - start);
+        return dateStr;
+    }
+
+    private string FormatTime(string utcTime)
+    {
+        if (System.DateTime.TryParse(utcTime, out var utc))
+        {
+            var local = utc.ToLocalTime();
+            return local.ToString("dd MMM, hh:mm tt");
+        }
+        return utcTime;
     }
 }

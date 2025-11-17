@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="back500" size="0.075000 0.070957" />
+    <ImageTarget name="back100" size="0.142000 0.184260" />
+    <ImageTarget name="front500" size="0.150000 0.066992" />
     <ImageTarget name="front100" size="0.142000 0.065729" />
     <ImageTarget name="front200" size="0.146000 0.065182" />
+    <ImageTarget name="back200" size="0.146000 0.065004" />
     <ImageTarget name="front50" size="0.135000 0.066027" />
     <ImageTarget name="back50" size="0.135000 0.068036" />
     <ImageTarget name="front20" size="0.147000 0.070904" />
