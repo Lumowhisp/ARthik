@@ -68,7 +68,8 @@ ARthik/
 | Version | Status | Notes |
 |----------|---------|------|
 | 1.00–1.09 | Beta | Initial builds and UI tests |
-| 2.01–2.07 | Stable | Added ARthik UI, improved performance, added SmartBillC |
+| 2.01–2.07 | Testing | Added ARthik UI, improved performance|
+| 2.08–2.09 | Stable | Added ARthik UI, improved performance,DataBase Updated,Last Update Feature for API|
 
 ---
 
